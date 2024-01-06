@@ -25,7 +25,7 @@ export default async function Featured() {
           <b>Welcome to BlogNet!</b> A social network home of blogs.
         </span>
         {data.map((item) => (
-          <div className={styles.post}>
+          <div className={styles.post} key={item?._id}>
             {item?.img && (
               <div className={styles.imgContainer}>
                 <Image src={item?.img} alt="" fill className={styles.image} />
