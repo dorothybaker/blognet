@@ -125,8 +125,11 @@ export default function Page() {
               gap: "10px",
             }}
           >
-            <select onChange={(e) => setCategory(e.target.value)}>
-              <option value="" disabled selected hidden>
+            <select
+              onChange={(e) => setCategory(e.target.value)}
+              defaultValue="placeholder"
+            >
+              <option value="placeholder" disabled hidden>
                 Select a category
               </option>
               <option value="coding">Coding</option>
