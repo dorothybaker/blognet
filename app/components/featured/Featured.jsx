@@ -3,24 +3,24 @@ import styles from "./featured.module.css";
 import { FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
 
-// const getData = async () => {
-//   const res = await fetch("http://localhost:3000/api/random", {
-//     cache: "no-cache",
-//   });
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/random", {
+    cache: "no-cache",
+  });
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 export default async function Featured() {
-  // const data = await getData();
+  const data = await getData();
 
   return (
     <>
-      {/* <div className={styles.container}>
+      <div className={styles.container}>
         <span className={styles.title}>
           <b>Welcome to BlogNet!</b> A social network home of blogs.
         </span>
@@ -43,8 +43,7 @@ export default async function Featured() {
             </div>
           </div>
         ))}
-      </div> */}
-      featured
+      </div>
     </>
   );
 }

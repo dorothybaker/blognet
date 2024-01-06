@@ -2,24 +2,24 @@ import Link from "next/link";
 import styles from "./categoryList.module.css";
 import Image from "next/image";
 
-// const getData = async () => {
-//   const res = await fetch("http://localhost:3000/api/categories", {
-//     cache: "no-cache",
-//   });
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/categories", {
+    cache: "no-cache",
+  });
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 export default async function CategoryList() {
-  // const data = await getData();
+  const data = await getData();
 
   return (
     <>
-      {/* <div className={styles.container}>
+      <div className={styles.container}>
         <h2 className={styles.title}>Popular Categories</h2>
         <div className={styles.categories}>
           {data?.map((item) => (
@@ -41,8 +41,7 @@ export default async function CategoryList() {
             </Link>
           ))}
         </div>
-      </div> */}
-      category
+      </div>
     </>
   );
 }

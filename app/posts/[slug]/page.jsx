@@ -3,74 +3,73 @@ import styles from "./page.module.css";
 import Menu from "@/app/components/menu/Menu";
 import Comments from "@/app/components/comments/Comments";
 
-// const getData = async (slug) => {
-//   const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
-//     cache: "no-cache",
-//   });
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+    cache: "no-cache",
+  });
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong!");
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong!");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 const Page = async ({ params }) => {
-  // const { slug } = params;
+  const { slug } = params;
 
-  // const data = await getData(slug);
+  const data = await getData(slug);
 
   return (
     <>
-      {/* <div className={styles.container}>
-      <div className={styles.infoContainer}>
-        <div className={styles.textContainer}>
-          <h1 className={styles.title}>{data?.title}</h1>
-          <div className={styles.user}>
-            {data?.user?.image && (
-              <div className={styles.userImgContainer}>
-                <Image
-                  src={data?.user?.image}
-                  alt=""
-                  fill
-                  className={styles.avatar}
-                />
+      <div className={styles.container}>
+        <div className={styles.infoContainer}>
+          <div className={styles.textContainer}>
+            <h1 className={styles.title}>{data?.title}</h1>
+            <div className={styles.user}>
+              {data?.user?.image && (
+                <div className={styles.userImgContainer}>
+                  <Image
+                    src={data?.user?.image}
+                    alt=""
+                    fill
+                    className={styles.avatar}
+                  />
+                </div>
+              )}
+              <div className={styles.userTextContainer}>
+                <span className={styles.username}>{data?.user?.name}</span>
+                <span className={styles.date}>
+                  {data?.createdAt?.substring(0, 10)}
+                </span>
               </div>
-            )}
-            <div className={styles.userTextContainer}>
-              <span className={styles.username}>{data?.user?.name}</span>
-              <span className={styles.date}>
-                {data?.createdAt?.substring(0, 10)}
-              </span>
             </div>
           </div>
+          {data?.img && (
+            <div className={styles.imgContainer}>
+              <Image
+                src={data?.img}
+                alt="post Image"
+                fill
+                className={styles.image}
+              />
+            </div>
+          )}
         </div>
-        {data?.img && (
-          <div className={styles.imgContainer}>
-            <Image
-              src={data?.img}
-              alt="post Image"
-              fill
-              className={styles.image}
+        <div className={styles.content}>
+          <div className={styles.post}>
+            <div
+              className={styles.description}
+              dangerouslySetInnerHTML={{ __html: data?.desc }}
             />
-          </div>
-        )}
-      </div>
-      <div className={styles.content}>
-        <div className={styles.post}>
-          <div
-            className={styles.description}
-            dangerouslySetInnerHTML={{ __html: data?.desc }}
-          />
 
-          <div className={styles.comment}>
-            <Comments postSlug={slug} />
+            <div className={styles.comment}>
+              <Comments postSlug={slug} />
+            </div>
           </div>
+          <Menu />
         </div>
-        <Menu />
       </div>
-    </div> */}
-      post
     </>
   );
 };

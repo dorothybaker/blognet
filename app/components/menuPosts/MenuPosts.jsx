@@ -1,23 +1,22 @@
 import Link from "next/link";
 
-// const getData = async () => {
-//   const res = await fetch("http://localhost:3000/api/popular", {
-//     cache: "no-cache",
-//   });
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/popular", {
+    cache: "no-cache",
+  });
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 const MenuPosts = async ({ styles }) => {
-  // const data = await getData();
+  const data = await getData();
 
   return (
-    <>
-      {/* <div className={styles.items}>
+    <div className={styles.items}>
       {data.map((item) => (
         <Link href={`/posts/${item?.slug}`} className={styles.item}>
           <div className={styles.textContainer}>
@@ -34,9 +33,7 @@ const MenuPosts = async ({ styles }) => {
           </div>
         </Link>
       ))}
-    </div> */}
-      menu posts
-    </>
+    </div>
   );
 };
 
