@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Menu from "@/app/components/menu/Menu";
-import Comments from "@/app/components/comments/Comments";
+import Comments from "@/components/comments/Comments";
+import Menu from "@/components/menu/Menu";
 
 const getData = async (slug) => {
   const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
