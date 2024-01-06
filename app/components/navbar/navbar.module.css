@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+.logo {
+  flex: 1;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex: 1;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+@media screen and (max-width: 640px) {
+  .social {
+    display: none;
+  }
+  .logo {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  .links {
+    flex: 0;
+  }
+  .link {
+    display: none;
+  }
+}

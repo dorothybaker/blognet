@@ -1,0 +1,59 @@
+.container {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.imgContainer {
+  flex: 1;
+  height: 270px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.date {
+  color: gray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.category {
+  color: crimson;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.desc {
+  color: var(--softTextColor);
+}
+
+.link {
+  border-bottom: 1px solid crimson;
+  max-width: max-content;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+  .imgContainer {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+.categoryList {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.categoryItem {
+  width: 120px;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.style {
+  background: #57c4ff31;
+}
+.fashion {
+  background: #da85c731;
+}
+.food {
+  background: #7fb88133;
+}
+.travel {
+  background: #ff795736;
+}
+.culture {
+  background: #ffb04f45;
+}
+.coding {
+  background: #5e4fff31;
+}

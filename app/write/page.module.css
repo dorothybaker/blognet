@@ -1,0 +1,103 @@
+.editor {
+  display: flex;
+  gap: 20px;
+  min-height: 400px;
+  position: relative;
+}
+
+.textArea {
+  width: 100%;
+}
+
+.button,
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--textColor);
+  color: var(--textColor);
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: 9.4px;
+}
+
+.addButton {
+  color: #1a8917;
+  border-color: #1a8917;
+}
+
+.add {
+  display: flex;
+  gap: 20px;
+  background: var(--bg);
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  left: 50px;
+}
+
+.input {
+  padding: 30px 0;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  color: var(--textColor);
+}
+
+.input::placeholder {
+  color: #b3b3b1;
+}
+
+.publish {
+  padding: 10px 23px;
+  border: none;
+  margin-top: 10px;
+  background: #1a8917;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.inpDetail {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.inpDetail select {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 7px 10px;
+  max-width: 300px;
+  outline: none;
+  border: 1px solid var(--softTextColor);
+  border-radius: 0px;
+  flex: 2;
+}
+
+.progress {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inpDetail select option {
+  color: gray;
+}
+
+@media screen and (max-width: 640px) {
+  .input {
+    font-size: 30px;
+    padding: 20px 0;
+  }
+
+  .editor {
+    gap: 10px;
+  }
+}

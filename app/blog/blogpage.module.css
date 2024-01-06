@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  gap: 30px;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.travel {
+  color: #ff7857;
+}
+.coding {
+  color: #775aec;
+}
+.style {
+  color: #789cff;
+}
+.food {
+  color: #7fb881;
+}
+.culture {
+  color: #ffb14f;
+}
+.fashion {
+  color: #ff7887;
+}

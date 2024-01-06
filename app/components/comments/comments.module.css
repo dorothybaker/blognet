@@ -1,0 +1,72 @@
+.title {
+  margin: 30px 0;
+}
+
+.write {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input {
+  padding: 10px;
+  width: 100%;
+  font-family: inherit;
+  outline: none;
+  border-radius: 0px;
+  resize: none;
+  height: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button {
+  color: white;
+  background: teal;
+  border: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.userTextContainer {
+  display: flex;
+  flex-direction: column;
+  color: var(--softTextColor);
+}
+
+.username {
+  font-size: 15px;
+}
+
+.date {
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.desc {
+  font-size: 15px;
+  margin-top: 7px;
+}
+
+.comments {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

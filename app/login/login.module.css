@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  min-height: 50vh;
+}
+
+.wrapper {
+  background: var(--softBg);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialButton {
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.socialButton span {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.socialButton:first-child {
+  background: #ff5555;
+}
+.socialButton:last-child {
+  background: black;
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding: 40px 20px;
+  }
+}

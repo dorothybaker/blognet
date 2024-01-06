@@ -1,0 +1,68 @@
+:root {
+  --bg: white;
+  --textColor: black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.dark {
+  --bg: #222;
+  --textColor: #ddd;
+  --softBg: #333;
+  --softTextColor: #a6a6a6;
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--textColor);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 50px;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
+
+.ql-container {
+  font-size: 18px !important;
+  font-family: inherit !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  color: #b3b3b1;
+  font-style: normal;
+}
