@@ -3,7 +3,7 @@ import styles from "./categoryList.module.css";
 import Image from "next/image";
 
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/categories", {
+  const res = await fetch("https://blognet-ten.vercel.app/api/categories", {
     cache: "no-cache",
   });
 

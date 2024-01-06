@@ -4,7 +4,7 @@ import styles from "./cardList.module.css";
 
 const getData = async (page, cat) => {
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
+    `https://blognet-ten.vercel.app/api/posts?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-cache",
     }

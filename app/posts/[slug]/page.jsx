@@ -4,7 +4,7 @@ import Comments from "@/components/comments/Comments";
 import Menu from "@/components/menu/Menu";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+  const res = await fetch(`https://blognet-ten.vercel.app/api/posts/${slug}`, {
     cache: "no-cache",
   });
 

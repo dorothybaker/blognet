@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/popular", {
+  const res = await fetch("https://blognet-ten.vercel.app/api/popular", {
     cache: "no-cache",
   });
 
