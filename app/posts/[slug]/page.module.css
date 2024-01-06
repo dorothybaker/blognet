@@ -94,6 +94,7 @@
   }
   .textContainer {
     flex: auto;
+    align-self: flex-start;
   }
   .imgContainer {
     flex: auto;
