@@ -11,16 +11,17 @@ import styles from "./page.module.css";
 
 import { IoMdAdd, IoMdImages } from "react-icons/io";
 
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { app } from "@/libs/firebase";
+import dynamic from "next/dynamic";
 
 const storage = getStorage(app);
 
 export default function Page() {
   const [open, setOpen] = useState(false);
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
   const [value, setValue] = useState("");
   const [media, setMedia] = useState("");
