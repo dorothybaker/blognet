@@ -179,7 +179,7 @@ export default function Page() {
         Publish
       </button>
     </div> */}
-      write
+      <div>write</div>
     </>
   );
 }
