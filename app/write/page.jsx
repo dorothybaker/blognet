@@ -11,8 +11,8 @@ import styles from "./page.module.css";
 
 import { IoMdAdd, IoMdImages } from "react-icons/io";
 
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.bubble.css";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.bubble.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { app } from "@/libs/firebase";
