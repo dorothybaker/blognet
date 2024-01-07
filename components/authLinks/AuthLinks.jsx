@@ -44,14 +44,13 @@ export default function AuthLinks() {
       {open && (
         <div className={styles.menu}>
           <Link href="/">HomePage</Link>
-          <Link href="/">Contact Us</Link>
-          <Link href="/">About</Link>
-          {status === "notauthenticated" ? (
+          <Link href="/about">About</Link>
+          {status === "unauthenticated" ? (
             <Link href="/login">Login</Link>
           ) : (
             <>
               <Link href="/write">Write</Link>
-              <span className={styles.link}>Log Out!</span>
+              <span onClick={signOut}>Log Out!</span>
             </>
           )}
           <div className={styles.social}>

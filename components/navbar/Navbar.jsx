@@ -14,16 +14,13 @@ export default function Navbar() {
           <FaGithub size={22} />
           <FaLinkedin size={22} style={{ color: "#0077b5" }} />
         </div>
-        <div className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <h2>BlogNet</h2>
-        </div>
+        </Link>
         <div className={styles.links}>
           <ThemeToggle />
           <Link className={styles.link} href="/">
             HomePage
-          </Link>
-          <Link className={styles.link} href="/">
-            Contact Us
           </Link>
           <Link className={styles.link} href="/about">
             About
